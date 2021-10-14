@@ -44,6 +44,9 @@ bot.on('message', message =>{
                 .addField('<:botrole:862171022408286238>', "ADC", true)
                 .addField('<:suprole:862171022425980968>', "Sup", true)
                 .addField('<:fillrole:862171431689125898>', "Fill", true)
+
+                //to have an empty field, you must use: '\u200b' . its basically a character with no width so it doesnt show. embeds dont like empty fields.
+
                 //thumbnail is an image in the top right of the embed message. keep to this url format if using imgur cos its fucky.
                 .setThumbnail("https://i.imgur.com/EnKlGeA.jpg")
                 //sets the line on the side of the embed to a hex colour code.
@@ -57,6 +60,14 @@ bot.on('message', message =>{
 
 // Message. is the object to handle recieving and sending anything to do with discord.
 // You can get server IDs, user IDs, user pictures and all info about them through this.
+
+// IMPORTANT FOR EMOTES
+// to use emotes in discord, you can copy and paste the default emotes (windows supported ones or discord free ones)
+// to use custom emotes, they need to be within the server the bot is using them and you must find their IDs. To find an ID of a custom emote. type into discord the \emote
+// itll then send the message in its ID form.
+// for example using a standard discord emote looks like this: 😆
+// but a custom one would look like this: <:Chungus:700565638808207442>
+// IMPORTANT FOR EMOTES
 
 //use the bot accounts token to login to discord.
 bot.login(botSettings.token);
